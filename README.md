@@ -73,10 +73,26 @@
 ### Задание 3
 
 1. Сделайте в GitHub из ветки 'terraform-05' новую ветку 'terraform-hotfix'.
-2. Проверье код с помощью tflint и checkov, исправьте все предупреждения и ошибки в 'terraform-hotfix', сделайте коммит.
+2. Проверьте код с помощью tflint и checkov, исправьте все предупреждения и ошибки в 'terraform-hotfix', сделайте коммит.
 3. Откройте новый pull request 'terraform-hotfix' --> 'terraform-05'. 
 4. Вставьте в комментарий PR результат анализа tflint и checkov, план изменений инфраструктуры из вывода команды terraform plan.
 5. Пришлите ссылку на PR для ревью. Вливать код в 'terraform-05' не нужно.
+
+### Решение 3
+
+1. В GitHub из ветки 'terraform-05' создал новую ветку 'terraform-hotfix'.
+
+2. Проверил код с помощью tflint и checkov, исправил все предупреждения и ошибки в 'terraform-hotfix', сделал коммит:
+
+![img_10.png](IMG/img_10.png)
+
+3. Создал новый pull request 'terraform-hotfix' --> 'terraform-05'.
+
+4. Добавил в него комментарий с результатом работы tflint и checkov.
+
+5. Ссылка на PR для ревью:
+
+https://github.com/DemoniumBlack/fedorchukds-devops-33-14/pull/1
 
 ------
 ### Задание 4
