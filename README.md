@@ -114,7 +114,7 @@ https://github.com/DemoniumBlack/fedorchukds-devops-33-14/pull/1
 
 ![img_12.png](IMG/img_12.png)
 
-Ссылка на код: 
+Ссылка на код: https://github.com/DemoniumBlack/fedorchukds-devops-33-15/blob/main/SRC/validation/variables_4.tf
 
 
 ### Задание 5*
@@ -157,7 +157,7 @@ variable "in_the_end_there_can_be_only_one" {
 
 ![img_15.png](img_15.png)
 
-Ссылка на код: 
+Ссылка на код: https://github.com/DemoniumBlack/fedorchukds-devops-33-15/blob/main/SRC/validation/variables_5.tf
 
 ------
 ### Задание 6*

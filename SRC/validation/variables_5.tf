@@ -1,19 +1,29 @@
-variable "ip_address" {
-  description = "ip-адрес"
+variable "string_check" {
   type        = string
-  default = "192.168.0.1"
+  description = "любая строка"
+  default     = "test-string"
+
   validation {
-    condition     = can(regex("^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$", var.ip_address))
-    error_message = "Неправильный ip-адрес"
+      condition = var.string_check == lower(var.string_check)
+      error_message = "В строке не должно быть символов верхнего регистра"
   }
 }
 
-variable "ip_address_list" {
-  description = "список ip-адресов"
-  type        = list(string)
-  default     = ["192.168.0.1", "1.1.1.1", "127.0.0.1"]
-  validation {
-    condition = alltrue([for ip in var.ip_address_list: can(regex("^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$", ip))])
-    error_message = "Неправильный список ip-адресов"
-  }
+
+variable "in_the_end_there_can_be_only_one" {
+    description="Who is better Connor or Duncan?"
+    type = object({
+        Dunkan = optional(bool)
+        Connor = optional(bool)
+    })
+
+    default = {
+        Dunkan = true
+        Connor = false
+    }
+
+    validation {
+        error_message = "There can be only one MacLeod"
+        condition = var.in_the_end_there_can_be_only_one.Dunkan !=  var.in_the_end_there_can_be_only_one.Connor
+    }
 }
